@@ -1,0 +1,42 @@
+What is MapMaker?
+----------------
+MapMaker is a program that can be used to create maps which consist of rooms and links between those rooms, as is the case with mud maps.
+
+Also, it can generate ROM area files from the maps created.
+
+
+What are the advantages of using MapMaker?
+-----------------------------------------
+The main advantage of MapMaker as opposed to hand-drawn maps is that it allows for easy distribution of the maps created through the internet.
+Also, MapMaker can be used as tool for creating the room structure of ROM areas. This works a whole lot easier and faster than with OLC.
+
+
+How does it work?
+----------------
+MapMaker operates on a rectangular map with rooms arrayed on a grid and a map description.
+
+Each point in the grid can hold a normal room with 10 exits each of which can hold a link to other rooms in the directions n, e, s, w, ne, se, sw, nw, up and down. Each room may have a room description.
+Also, each room can be either marked or unmarked. This is a handy tool for editing, as some commands opperate on all marked rooms at once.
+
+Links between rooms are usually symetrical, but you can mark an exit holding a link as blocked. Blocked exits will look differently on the map, and will be ignored when creating a ROM area file, thus allowing one-way links.
+
+Finally, there are so called 'virtual rooms'. They can be placed on a grid point instead of a normal room. A virtual room can hold only two links, and will not be invisible when creating an image. The purpose of a virtual room is this: by connection two rooms (which are very remote) over one or more virtual rooms, you can define how the link will be drawn. Also it can be used to indicate connections to rooms outside the map (e.g. other areas). When creating a ROM area, virtual rooms will be ignored, and links with virtual rooms 'in between' treated as normal links.
+
+For details on how to create rooms and links, see help edit.
+
+
+History of MapMaker
+-------------------
+v1.0: Written in Turbo Pascal, old and ugly
+v2.0: Rewritten from scratch in Java, massive changes everywhere
+      Can now create ROM areas
+v2.1: Image Menu added
+v2.2: link-mean-rooms option added; virtual rooms now can have descriptions
+      MapsToHtml tool included
+v2.3: OLC support added
+v2.3.1: ROM command options improved
+v2.3.2: Maximum map size increased to 1000x1000.
+v2.3.3: room color added
+v2.3.4: room description formatting improved
+v2.3.5: fixed small bug with description editor
+v2.4: Can now import ROM areas

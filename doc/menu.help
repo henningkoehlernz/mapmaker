@@ -1,0 +1,120 @@
+File Menu:
+---------
+
+* New:
+  starts a new map
+
+* Open:
+  opens a new map
+
+* Save:
+  saves the current map
+
+* Save as:
+  saves the current map to a file of your choice
+
+* Exit:
+  exits MapMaker
+
+Edit Menu:
+---------
+
+* Clear:
+  deletes all rooms and the map description
+
+* Map Size:
+  lets you change the number of rooms the current map can hold in vertical and horizontal direction
+
+* Search Rooms:
+  marks all room descriptions containing a String you must specify; if you select the "match room name" option, only rooms where the room name matches the search string exactly will be marked; the name of a room is the first non-comment, non-command line in the description
+  note: you can mark all rooms without a name by selecting "match room name" and searching for an empty string
+
+* Unmark Rooms:
+  sets all rooms on the map to unmarked
+
+* Color Rooms:
+  sets all marked rooms to the chosen color
+
+* [] drag up/down
+  if selected, up and down connections will be treated as normal connections for the purpose of moving a group of rooms with shift-left-drag;
+  if unselected, up and down connection will be treated as non-existant for room-group-moving
+
+* [] link mean rooms
+  if selected, you can link several rooms at once, provided they are in a straight line
+
+View Menu:
+---------
+
+* View Size:
+  lets you change the size with which the map will be drawn
+
+  * Custom:
+    sets the view size to a value of your choice
+
+  * Small:
+    sets the view size to a small standard size
+
+  * Medium:
+    sets the view size to a medium standard size
+    
+* Maximize:
+  resizes the main window so that the map fits in without using scrollbars
+  
+* [] Show Virtual Rooms:
+  if selected, virtual rooms will be visible as faint outlines
+  if unselected, virtual rooms will not be drawn
+
+Image Menu:
+----------
+
+* () Legend Right of/Below Map:
+  determins wether the map's legend which contains the room names will be located to the right of the map or below it when saved as image
+
+* Save as Image:
+  saves the map as an image file
+  (currently the jpeg format is used, since I have no java library for a better suited format)
+
+* Preview Image:
+  displays a preview of the map as it would be saved as image
+
+ROM Menu:
+--------
+
+* Set Sector:
+  adds a line containing a ROM command for the chosen sector to the room description of all marked rooms
+
+* Set Room Flag:
+  adds a line containing a ROM command for the chosen flag to the room description of all marked rooms
+
+* Remove Room Flag:
+  removes the ROM command for the chosen flag from the room description of all marked rooms
+
+* Create ROM Area:
+  creates a ROM area file from the current map
+  see ROM help for more information
+
+* Create OLC Code:
+  creates a text file which consists of instructions for OLC
+  if sent to the mud, this will create the area defined by the map
+
+* Import ROM Area:
+  reads the room structure of a ROM area file and creates a map from it
+
+Help:
+----
+
+* General:
+  displays some basic help on what MapMaker is and how it works
+
+* Edit:
+  lists which keys and mouse buttons must be pressed to edit the map
+
+* Menu:
+  displays this help
+
+* ROM:
+  explains how to create ROM area files with MapMaker
+
+* About:
+  shows version and author information
+

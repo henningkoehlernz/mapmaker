@@ -1,0 +1,76 @@
+How to create a ROM area file with MapMaker
+-------------------------------------------
+
+Before you try to create a ROM area file, you should be familiar with the basic concepts of the ROM area system. In the following, I'll assume that you are.
+
+MapMaker creates a runnable area file (Menu: Extra/Create ROM Area) from the current map, that can directly be loaded by ROM and further edited with OLC or whatever you might be using. The area file thus created contains only the area header and the #ROOMS section.
+
+Naturally, MapMaker will create a room in the ROM area for every (non-virtual) room on the map, and link it to the rooms linked to it on the map. Generally, this will create for two-way links. However, if you mark an exit as blocked, MapMaker will ommit to create a link for that exit, thus allowing one-way links. Doors are not supported by MapMaker and must be added afterwards.
+
+The first line of a room description will be used as the ROM room name, the following lines as the ROM room decription. The first line in the map description will be used as the ROM area name. Lines in room and map descriptions starting with "/" will be treated as comments and thus ignored. Lines starting with '#' have a special meaning as ROM Commands (see below).
+
+Room and area vnums will be chosed automatically, based on a start value that you will be prompted for. However, you may choose to define the vnum of a room if you like (e.g. for creating pet shops) with the #VNUM command. The vnum specified this way will be added to the start vnum of the area, so make sure that you ONLY USE RELATIVE VNUMS. 
+
+ROM Commands:
+------------
+
+MapMaker supports several so called "ROM Commands" that are used to specify room details. A ROM Command always starts with the '#' character, followed by the command identifier and if needed a parameter. ROM Commands must be added to the room description of the room they belong to. They may be listed in any order, but each must occupy its own line. CAPITALIZATION IS REQUIRED!
+
+The following is a complete list of all ROM Commands supported:
+
+#VNUM <integer>
+
+defines the relative vnum of the room; the final vnum the room will recieve is calculated as start vnum + relative vnum
+
+#SECTOR <type: string> 
+or
+#SECTOR <integer>
+
+defines the sector of the room; the following type-strings are supported (Capitalization is required):
+
+INSIDE
+CITY
+FIELD
+FOREST
+HILLS
+MOUNTAINS
+WATER
+DEEP_WATER
+UNDERWATER
+AIR
+DESERT
+
+The following ROM Commands set the appropriate room-flag:
+
+#DARK
+#NO_MOB
+#INDOORS
+#PRIVATE
+#SAFE
+#SOLITARY
+#PET_SHOP
+#NO_RECALL
+
+A quick example of a room description:
+
+Before a huge gate
+/this is a comment: the line above is the room name
+You stand before a large iron gate. Pillars loom up on boths sides
+of it, with stone statues of gargoyles upon them. Did they just move?
+/that was the room description
+#VNUM 0
+/set the relative vnum to 0 since the area should be linked here and
+/I therefore want it to be the first room in the area
+#DARK
+#NO_RECALL
+#SECTOR MOUNTAIN
+
+A word on Compatibility:
+-----------------------
+
+While MapMaker supports ne, se, sw, nw directions, standard ROM does not. So be careful not to use these exits unless the mud you're creating the area for can support them. The integer values MapMaker assigns for the extra directions when converting a map to an area file are as follows (taken from Aarchon):
+
+NE: 6
+SE: 7
+SW: 8
+NW: 9

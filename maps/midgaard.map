@@ -1,0 +1,384 @@
+#MAP
+10 15
+/Midgaard
+#ROOM
+1 5
+/Northern Midgaard
+//(Clan Road)
+#ROOM
+1 6
+/West Gate
+#ROOM
+1 8
+/Wall Road
+#ROOM
+1 9
+/Wall Road
+#ROOM
+1 11
+/Wall Road
+#ROOM
+1 12
+/Bridge
+#ROOM
+1 13
+/Southern Midgaard
+#ROOM
+2 5
+/Magic Shop
+#ROOM
+2 6
+/Main Street
+#ROOM
+2 7
+/Mage Guild
+#ROOM
+2 8
+/Leather Shop
+#ROOM
+2 9
+/Poor Alley
+#ROOM
+2 10
+/Temple Of Stupid
+#ROOM
+2 11
+/Mob Factory
+#ROOM
+3 4
+/Cleric Guild
+#ROOM
+3 5
+/Bakery
+#ROOM
+3 6
+/Main Street
+#ROOM
+3 7
+/Armoury
+#ROOM
+3 8
+/Map Shop
+#ROOM
+3 9
+/Poor Alley
+#ROOM
+3 10
+/Grubby Inn
+#ROOM
+3 11
+/Sewers
+#ROOM
+4 0
+/Rainbow Bridge
+//(Asgard and Valhalla)
+#ROOM
+4 1
+/Temple Altar
+//(Healer, Pit)
+#ROOM
+4 2
+/Temple of Mota
+//(Recall)
+#ROOM
+4 4
+/Temple Square
+#ROOM
+4 6
+/Market Square
+#ROOM
+4 9
+/Common Square
+#ROOM
+4 10
+/Dump
+#ROOM
+4 11
+/Southern Bridge
+#ROOM
+4 12
+/Southern Midgaard
+#ROOM
+5 0
+/Mud School
+#ROOM
+5 1
+/Entrance to Mud School
+#ROOM
+5 2
+/Arena
+#ROOM
+5 3
+/In the Air
+#ROOM
+5 4
+/Grunting Boar Inn
+#ROOM
+5 5
+/Grocer
+#ROOM
+5 6
+/Main Street
+#ROOM
+5 7
+/Jewler
+#ROOM
+5 8
+/Greve's Tavern
+#ROOM
+5 9
+/Dark Alley
+#ROOM
+5 10
+/Thieves Guild
+#ROOM
+6 3
+/Defunct Reception
+#ROOM
+6 4
+/Bar
+#ROOM
+6 5
+/Weaponsmith
+#ROOM
+6 6
+/Main Street
+#ROOM
+6 7
+/Warrior Guild
+#ROOM
+6 8
+/Pet Shop
+#ROOM
+6 9
+/Dark Alley
+#ROOM
+6 10
+/Levee
+//(Boats)
+#ROOM
+6 11
+/Midgaard River
+#ROOM
+7 8
+/Apothecary
+//(Potions)
+#ROOM
+7 9
+/Dark Alley
+#ROOM
+7 10
+/Warehouse
+//(Sailor)
+#ROOM
+8 5
+/Northern Midgaard
+//(Clan Road)
+#ROOM
+8 6
+/East Gate
+#ROOM
+8 8
+/Wall Road
+#ROOM
+8 9
+/Wall Road
+#ROOM
+8 10
+/Wall Road
+#ROOM
+8 11
+/Bridge
+#ROOM
+8 12
+/Southern Midgaard
+#LINK
+4 4 s
+4 6 n
+#LINK
+4 6 s
+4 9 n
+#LINK
+4 9 s
+4 10 n
+#LINK
+4 11 n
+4 10 s
+#LINK
+4 11 s
+4 12 n
+#LINK
+3 9 e
+4 9 w
+#LINK
+3 9 w
+2 9 e
+#LINK
+2 9 w
+1 9 e
+#LINK
+2 8 s
+2 9 n
+#LINK
+2 9 s
+2 10 n
+#LINK
+3 10 n
+3 9 s
+#LINK
+3 9 n
+3 8 s
+#LINK
+1 8 s
+1 9 n
+#LINK
+1 6 s
+1 8 n
+#LINK
+3 6 e
+4 6 w
+#LINK
+3 6 w
+2 6 e
+#LINK
+2 6 w
+1 6 e
+#LINK
+2 5 s
+2 6 n
+#LINK
+2 6 s
+2 7 n
+#LINK
+3 5 s
+3 6 n
+#LINK
+3 6 s
+3 7 n
+#LINK
+1 11 n
+1 9 s
+#LINK
+2 11 w
+1 11 e
+#LINK
+1 11 s
+1 12 n
+#LINK
+1 12 s
+1 13 n
+#LINK
+1 5 s
+1 6 n
+#LINK
+4 9 e
+5 9 w
+#LINK
+5 9 e
+6 9 w
+#LINK
+6 9 e
+7 9 w
+#LINK
+7 9 e
+8 9 w
+#LINK
+5 6 w
+4 6 e
+#LINK
+5 6 e
+6 6 w
+#LINK
+6 7 n
+6 6 s
+#LINK
+6 6 n
+6 5 s
+#LINK
+5 5 s
+5 6 n
+#LINK
+5 6 s
+5 7 n
+#LINK
+8 6 w
+6 6 e
+#LINK
+8 9 n
+8 8 s
+#LINK
+8 8 n
+8 6 s
+#LINK
+8 10 n
+8 9 s
+#LINK
+8 11 n
+8 10 s
+#LINK
+5 8 s
+5 9 n
+#LINK
+5 9 s
+5 10 n
+#LINK
+6 8 s
+6 9 n
+#LINK
+6 9 s
+6 10 n
+#LINK
+7 8 s
+7 9 n
+#LINK
+7 9 s
+7 10 n
+#LINK
+6 10 s
+6 11 n
+#LINK
+6 11 e
+8 11 w X
+#LINK
+8 11 s
+8 12 n
+#LINK
+8 5 s
+8 6 n
+#LINK
+3 4 e
+4 4 w
+#LINK
+4 2 s
+4 4 n
+#LINK
+5 1 d
+4 2 u
+#LINK
+5 0 s
+5 1 n
+#LINK
+5 1 s
+5 2 n
+#LINK
+4 1 s
+4 2 n
+#LINK
+4 4 e
+5 4 w
+#LINK
+5 4 e
+6 4 w
+#LINK
+5 3 d
+4 4 u
+#LINK
+6 3 d
+5 4 u
+#LINK
+4 0 d
+4 1 u
+#LINK
+3 11 u
+4 10 d
+#END

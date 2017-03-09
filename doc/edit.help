@@ -1,0 +1,71 @@
+Most of the map editing is done by mouse in combination with the shift- and control-keys. Here is a list of what you can do:
+
+Room Editing:
+------------
+
+* Add a new "normal" room:
+  left-click where you want it to be
+
+* Add a new virtual room:
+  move the mouse to where you want the room, then press <V>
+
+* Delete a room:
+  move the mouse over it, then press <Del>
+  note that you can't delete a room while it's selected
+
+* Move a room:
+  left-drag it to the new position
+
+* Move a set of rooms:
+  ctrl-left-drag one of the rooms to its new position
+  if the room dragged is marked, the this will move all marked rooms, else all rooms linked to the dragged room
+  all rooms will be moved in the same direction as the dragged room, provided there is space for them; if there is not, nothing will happen at all
+
+* Select a room:
+  right-click on it
+  
+* Unselect a room:
+  right-click on the selected room or any empty room field
+
+* Mark/Unmark a room:
+  shift-left-click on it
+
+* Mark a set of rooms:
+  shift-left-drag over the rooms you want to mark; all rooms in the rectangle defined by the drag will be marked
+
+Link Editing:
+------------
+
+* Link two rooms:
+  right-drag one room on the other
+  the program will automatically chose the exits for the link
+
+* Link several rooms in a straight line:
+  right-drag the first room in the line on the last room
+  the option "link mean rooms" must be enabled
+
+All of the following link editing can only be done with links of the currently selected room
+
+* Delete a link:
+  move the mouse over the corresponding exit, then press <Del>
+
+* Swap two exits:
+  left-drag one exit on the other
+
+* block/unblock exit:
+  left-click on it
+  the exit must be linked before it can be blocked
+
+Description Editing:
+-------------------
+
+* Edit map description:
+  press <Enter> or click the description editor while no room is selected
+
+* Edit room description:
+  press <Enter> or click the description editor while the room is selected
+
+* Copy Room descrition:
+  ctrl-right-click on the room you want to copy the description to
+  this will copy the description of the currently selected room
+  if no room is selected, nothing will happen

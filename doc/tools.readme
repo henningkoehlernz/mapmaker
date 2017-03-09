@@ -1,0 +1,19 @@
+The following tool(s) are included with MapMaker:
+
+MapsToHtml:
+----------
+This tool will can help you create a html file displaying your maps.
+You can call it like this:
+
+> java -classpath MapMaker.jar MapsToHtml map1 {map2 ..} htmlfile
+
+Here, map1 {map2 ..} are the map files you want to be displayed, and
+htmlfile the name of your html file.  This will first create image
+files from the given map files in the same directory as the map files,
+unless they exist already, and then the html file, which will display
+the image files and the map descriptions.
+
+When viewing the html file, make sure that the image files are located
+in the same directory as the html file.
+
+
