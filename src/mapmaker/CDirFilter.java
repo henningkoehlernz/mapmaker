@@ -17,7 +17,7 @@ public class CDirFilter
   /** initially accepts all
    */
   public CDirFilter() {
-    CDirFilter(true);
+    this(true);
   } // CDirFilter
 
   public boolean accept(int dir) {
