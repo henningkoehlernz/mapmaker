@@ -11,7 +11,7 @@ public class ImageUtil {
    * @param image the image to be saved
    * @param file the png file
    */
-  public static void saveImageAsPnG(BufferedImage image, File file) {
+  public static void saveImageAsPNG(BufferedImage image, File file) {
     try {
       ImageIO.write(image, "png", file);
     } catch (IOException e) {

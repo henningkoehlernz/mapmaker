@@ -281,8 +281,8 @@ public class MapMaker {
       checkPack();
       // update imageChooser to new default filename
       String fileName = loadSaveFile.get().getName();
-      String jpegName = FileUtil.substituteExtension(fileName, "jpg");
-      imageChooser.setSelectedFile(new File(jpegName));
+      String imageName = FileUtil.substituteExtension(fileName, "png");
+      imageChooser.setSelectedFile(new File(imageName));
     }
   } // loadMap
 
@@ -500,7 +500,7 @@ public class MapMaker {
 				    JOptionPane.ERROR_MESSAGE);
 	  return;
 	}
-	ImageUtil.saveImageAsJPEG(mapImage, fc.getSelectedFile());
+	ImageUtil.saveImageAsPNG(mapImage, fc.getSelectedFile());
 	fc.rescanCurrentDirectory();
       }
     } // actionPerformed

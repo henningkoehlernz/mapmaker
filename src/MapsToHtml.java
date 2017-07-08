@@ -10,7 +10,7 @@ import mapmaker.*;
  */
 public class MapsToHtml {
 
-  static final String imageExtension = "jpg";
+  static final String imageExtension = "png";
   static final String mapExtension = "map";
 
   static Text htmlText = new Text();
@@ -77,8 +77,8 @@ public class MapsToHtml {
       mip.layout(MapImagePainter.LEGEND_RIGHT);
       BufferedImage mapImage = mip.paintMapImage();
       if (mapImage != null) {
-	System.out.println("creating " + mapData.imageFileName + " ...");
-	ImageUtil.saveImageAsJPEG(mapImage, imageFile);
+        System.out.println("creating " + mapData.imageFileName + " ...");
+        ImageUtil.saveImageAsPNG(mapImage, imageFile);
       }
     }
 

@@ -9,5 +9,5 @@ compile:
 clean:
 	rm -r bin
 jar:
-	cd bin && jar cvfe ../MapMaker.jar MapMaker mapmaker/*.class mapmaker/mapcmd/*.class util/*.class
+	cd bin && jar cvfe ../MapMaker.jar MapMaker *.class mapmaker/*.class mapmaker/mapcmd/*.class util/*.class
 	jar uvf MapMaker.jar doc maps readme.txt
