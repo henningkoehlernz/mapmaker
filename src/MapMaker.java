@@ -15,6 +15,16 @@ public class MapMaker {
   static JFileChooser loadSaveFileChooser;
   static JFileChooser imageChooser;
   static ExtendedMapMVC mapMVC;
+  
+  /**
+   * create file chooser opening in current working directory
+   */
+  private static JFileChooser createFileChooser() {
+    File workingDirectory = new File(System.getProperty("user.dir"));
+    JFileChooser chooser = new JFileChooser();
+    chooser.setCurrentDirectory(workingDirectory);
+    return chooser;
+  }
 
   /** createJMenuBar; must be non-static to allow the action listeners
    * to be inner classes
@@ -240,14 +250,14 @@ public class MapMaker {
     loadSaveFile = new FileWrapper();
     loadSaveFile.addObserver(new FileTitleHandler(frame, "MapMaker"));
     // set up fileChooser
-    loadSaveFileChooser = new JFileChooser();
+    loadSaveFileChooser = createFileChooser();
     loadSaveFile.addObserver(new FileChooserSynchronizer(loadSaveFileChooser));
     /* wait for swing 1.0.3
     FileFilter mapFilter = new ExtensionFileFilter("map");
     loadSaveFileChooser.addChoosableFileFilter(mapFilter);
     loadSaveFileChooser.setFileFilter(mapFilter);
     */
-    imageChooser = new JFileChooser();
+    imageChooser = createFileChooser();
     // set up MVC
     mapMVC = MapFactory.createMapMVC();
     JMenuBar menuBar = new MapMaker().createJMenuBar();
@@ -639,7 +649,7 @@ public class MapMaker {
   class MapConvertAction implements ActionListener {
     
     MapConverter mapConverter;
-    JFileChooser fc = new JFileChooser();
+    JFileChooser fc = createFileChooser();
 
     public MapConvertAction(MapConverter mapConverter, String extension) {
       this.mapConverter = mapConverter;
