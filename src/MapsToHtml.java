@@ -36,7 +36,7 @@ public class MapsToHtml {
     }
 
     // create map data
-    Vector mapDataVector = new Vector();
+    Vector<MapData> mapDataVector = new Vector<MapData>();
     for (int i = 0; i < mapFileNames.length; i++)
       mapDataVector.add(createImageAndData(mapFileNames[i]));
     // sort it
@@ -144,13 +144,10 @@ class MapData {
 } // MapData
 
 
-class MapDataComparator implements Comparator {
+class MapDataComparator implements Comparator<MapData> {
   
-  Comparator comp = Collator.getInstance();
-  
-  public int compare(Object o1, Object o2) {
-    return comp.compare(((MapData)o1).mapName,
-			((MapData)o2).mapName);
+  public int compare(MapData o1, MapData o2) {
+    return Collator.getInstance().compare(o1.mapName, o2.mapName);
   } // compare
   
 } // MapDataComparator

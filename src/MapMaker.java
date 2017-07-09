@@ -589,7 +589,7 @@ public class MapMaker {
    */
   static String requestChoice(String title, String[] choice) {
     ConfirmDialog dialog = new ConfirmDialog(title);
-    JComboBox comboBox = new JComboBox(choice);
+    JComboBox<String> comboBox = new JComboBox<String>(choice);
     JPanel comboPanel = new JPanel();
     comboPanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 50, 10));
     comboPanel.add(comboBox);
