@@ -1,7 +1,7 @@
 Requirements: 
 ------------ 
 
-To run MapMaker, you will need the java runtime environment (jre) v1.2 or newer, which can be downloaded at http://java.sun.com for most platforms.
+To run MapMaker, you will need the java runtime environment (jre) v1.7 or newer, which can be downloaded at http://java.sun.com for most platforms.
 
 
 Installation: 
@@ -12,6 +12,7 @@ If you read this, you should have extracted the following files:
 MapMaker.jar - the main program
 readme.txt - this file
 gpl-3.0.txt - liscence description
+makefile - for rebuilding mapmaker from src
 doc - documentation
 maps - sample maps
 src - cource code
