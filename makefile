@@ -1,11 +1,13 @@
+COPT = -cp bin -d bin -Xlint:unchecked
+
 default: compile
 all: clean compile jar
 
 compile:
 	mkdir -p bin/util bin/mapmaker/mapcmd
-	javac -cp bin -d bin src/util/*.java src/mapmaker/mapcmd/*.java
-	javac -cp bin -d bin src/mapmaker/*.java
-	javac -cp bin -d bin src/*.java src/*/*.java
+	javac $(COPT) src/util/*.java src/mapmaker/mapcmd/*.java
+	javac $(COPT) src/mapmaker/*.java
+	javac $(COPT) src/*.java src/*/*.java
 clean:
 	rm -r bin
 jar:

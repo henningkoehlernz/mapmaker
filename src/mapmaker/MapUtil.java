@@ -79,7 +79,7 @@ public class MapUtil {
 
   public static Room[] getMarkedRooms(AreaMap map) {
     Room[] rooms = map.getRooms();
-    Vector markedVector = new Vector();
+    Vector<Room> markedVector = new Vector<Room>();
     for (int i = 0; i < rooms.length; i++)
       if (rooms[i].getMarked())
 	markedVector.addElement(rooms[i]);
@@ -146,7 +146,7 @@ public class MapUtil {
   public static Point[] meanRooms(AreaMap map, Point startPos, Point endPos) {
     Point[] meanPoints = MapMath.meanPoints(startPos, endPos);
     // check if rooms exist at mean positions
-    Vector meanRoomVector = new Vector();
+    Vector<Point> meanRoomVector = new Vector<Point>();
     for (int i = 0; i < meanPoints.length; i++)
       if (map.getRoom(meanPoints[i]) != null)
 	meanRoomVector.add(meanPoints[i]);

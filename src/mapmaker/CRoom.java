@@ -217,13 +217,13 @@ public class CRoom
    * @param upDownToo if false, does not return rooms linked
    * over 'up' or 'down' exits
    */
-  public Set neighbours(Object upDownToo) {
+  public Set<Node> neighbours(Object upDownToo) {
     // evaluate if up/down connections considered too
     int maxIndex = Dir.DIRNR - 2;
     if (((Boolean)upDownToo).booleanValue())
       maxIndex = Dir.DIRNR;
 
-    Set neighbours = new HashSet(maxIndex);
+    Set<Node> neighbours = new HashSet<Node>(maxIndex);
     for (int i = 0; i < maxIndex; i++)
       if (exitLinked(i))
 	neighbours.add(getLink(i).opposite(this));

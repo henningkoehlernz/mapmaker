@@ -7,6 +7,6 @@ public interface Node {
   /** returns all nodes directly connected to node
    * @param arg can specify which neighbours to return
    */
-  public Set neighbours(Object arg);
+  public Set<Node> neighbours(Object arg);
 
 } // Node

@@ -5,7 +5,7 @@ import java.util.*;
 public class CompositeFilter
   extends TextFilter {
 
-  Vector filterList = new Vector();
+  Vector<TextFilter> filterList = new Vector<TextFilter>();
 
   public void addFilter(TextFilter filter) {
     filterList.addElement(filter);
@@ -13,8 +13,8 @@ public class CompositeFilter
 
   public boolean accept(String line) {
     for (int i = 0; i < filterList.size(); i++)
-      if (!((TextFilter)filterList.elementAt(i)).accept(line))
-	return false;
+      if (!filterList.elementAt(i).accept(line))
+        return false;
     return true;
   } // accept
 

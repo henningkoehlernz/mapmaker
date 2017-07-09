@@ -8,8 +8,7 @@ public class CollumnPrinter {
   public static final int STYLE_MATCH_WIDTH = 0;
   public static final int STYLE_MATCH_HEIGHT = 1;
 
-  // contains Text objects as Elements
-  Vector collumns = new Vector();
+  Vector<Text> collumns = new Vector<Text>();
   int collumnWidth;
   int lineHeight;
 
@@ -114,7 +113,7 @@ public class CollumnPrinter {
   public Dimension getSize() {
     int maxLineNr = 0;
     for (int i = 0; i < collumns.size(); i++) {
-      int lineNr = ((Text)collumns.elementAt(i)).getLineCount();
+      int lineNr = collumns.elementAt(i).getLineCount();
       maxLineNr = Math.max(maxLineNr, lineNr);
     }
     return new Dimension(collumns.size() * getCollumnWidth(),
@@ -126,7 +125,7 @@ public class CollumnPrinter {
   public void print(Graphics g) {
     Shape orgClip = g.getClip();
     for (int cNr = 0; cNr < collumns.size(); cNr++) {
-      Text collumn = (Text)collumns.elementAt(cNr);
+      Text collumn = collumns.elementAt(cNr);
       for (int lNr = 0; lNr < collumn.getLineCount(); lNr++) {
 	String line = collumn.getLine(lNr);
 	int posX = cNr * getCollumnWidth();

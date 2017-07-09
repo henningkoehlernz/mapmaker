@@ -17,7 +17,7 @@ public class CMap
   Link[] links;
   Room selected;
 
-  Hashtable roomPos; // used to get the position of a room
+  Hashtable<Room,Point> roomPos; // used to get the position of a room
   BufferedObservable bufObs;
   MapFactory factory;
   
@@ -26,7 +26,7 @@ public class CMap
    */
   public CMap(int sizeX, int sizeY, Observable obs) {
     rooms = new Room[sizeX][sizeY];
-    roomPos = new Hashtable(sizeX * sizeY);
+    roomPos = new Hashtable<Room,Point>(sizeX * sizeY);
     links = new Link[0]; // not links = null !!!
     factory = new MapFactory();
     bufObs = new BufferedObservable(obs);

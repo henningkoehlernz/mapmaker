@@ -9,7 +9,7 @@ public class StateConverter
   implements StateController {
 
   private StateController stateController;
-  private Map converter = new HashMap();
+  private Map<Object,Object> converter = new HashMap<Object,Object>();
 
   public StateConverter(StateController stateController) {
     this.stateController = stateController;
@@ -26,8 +26,7 @@ public class StateConverter
     if (converter.containsKey(orgState))
       return converter.get(orgState);
     else {
-      System.out.println("orgState " + orgState + " not found in " +
-			 converter);
+      System.out.println("orgState " + orgState + " not found in " + converter);
       return orgState;
     }
   } // state

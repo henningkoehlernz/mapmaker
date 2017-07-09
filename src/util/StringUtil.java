@@ -10,7 +10,7 @@ public class StringUtil {
    * @param seperator the seperator character
    */
   public static String[] splitString(String s, int seperator) {
-    Vector strings = new Vector();
+    Vector<String> strings = new Vector<String>();
     int pos = 0;
     while (pos < s.length()) {
       int nextSep = s.indexOf(seperator, pos);

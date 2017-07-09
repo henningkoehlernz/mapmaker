@@ -20,7 +20,7 @@ public class MapImagePainter {
   /** stores all room names in the order as they will appear
    * in the legend
    */
-  protected Vector legend;
+  protected Vector<String> legend;
   protected int layoutStyle;
 
   protected static Color
@@ -51,7 +51,7 @@ public class MapImagePainter {
   } // createLegendText
 
   protected void createLegend() {
-    legend = new Vector();
+    legend = new Vector<String>();
     Room[] rooms = map.getRooms();
     for (int i = 0; i < rooms.length; i++)
       if (rooms[i] instanceof DescObj) {
@@ -61,8 +61,7 @@ public class MapImagePainter {
 	  legend.add(roomName);
       }
     // sort the legend alphabetically
-    Collections.sort((java.util.List)legend, 
-		     (Comparator)Collator.getInstance());
+    Collections.sort(legend, Collator.getInstance());
   } // createLegend
 
   /** returns the size (in pixels) the map image takes

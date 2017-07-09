@@ -119,10 +119,10 @@ public class RomConverterTool {
    * the room's vnum
    * @param startVnum the base for assigning relative vnums
    */
-  public static NoEqualValuesMap assignVnums(Room[] rooms, int startVnum) {
+  public static NoEqualValuesMap<Room,Integer> assignVnums(Room[] rooms, int startVnum) {
     // store vnums of rooms in roomVnums with rooms as keys
     // only store rooms that aren't virtual
-    NoEqualValuesMap roomVnums = new NoEqualValuesMap();
+    NoEqualValuesMap<Room,Integer> roomVnums = new NoEqualValuesMap<Room,Integer>();
     // first, check all rooms for vnum command
     for (int i = 0; i < rooms.length; i++) {
       if (!(rooms[i] instanceof VirtualRoom)) {

@@ -11,7 +11,7 @@ import java.util.*;
 public class MultiInputDialog 
   extends ConfirmDialog {
 
-  protected Vector inputList = new Vector();
+  protected Vector<JTextField> inputList = new Vector<JTextField>();
   protected Panel labelPanel = new Panel();
   protected Panel inputPanel = new Panel();
 
@@ -60,7 +60,7 @@ public class MultiInputDialog
    * @param lineNr the number of the input line, starting at 0
    */
   public String getInput(int lineNr) {
-    return ((JTextField)inputList.elementAt(lineNr)).getText();
+    return inputList.elementAt(lineNr).getText();
   } // getInput
 
 } // MultiInputDialog

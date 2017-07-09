@@ -68,7 +68,7 @@ public interface Room
    * @param upDownToo if false, does not return rooms linked
    * over 'up' or 'down' exits
    */
-  public Set neighbours(Object upDownToo);
+  public Set<Node> neighbours(Object upDownToo);
 
   /** returns wether the room is marked
    */

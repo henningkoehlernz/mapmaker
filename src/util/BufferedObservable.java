@@ -9,7 +9,7 @@ public class BufferedObservable
 extends Observable {
   
   // events must never be null
-  private HashSet events = new HashSet();
+  private HashSet<Object> events = new HashSet<Object>();
   private int delayCount = 0;
   private boolean mustNotify = false;
   

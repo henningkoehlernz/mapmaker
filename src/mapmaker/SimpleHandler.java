@@ -81,17 +81,19 @@ public class SimpleHandler extends MapEventHandler {
 	  return;
 	Point dir = new Point(released.x - pressed.x, 
 			      released.y - pressed.y);
-	Set rooms;
+	Set<Room> rooms;
 	if (root.getMarked()) {
 	  // move all marked rooms
 	  Room[] roomArr = MapUtil.getMarkedRooms(map);
-	  rooms = new HashSet();
+	  rooms = new HashSet<Room>();
 	  for (int i = 0; i < roomArr.length; i++)
 	    rooms.add(roomArr[i]);
 	}
 	else {
-	  // move all rooms connected
-	  rooms = collector.getNodeCollection(root, dragState.state());
+      // move all rooms connected
+      rooms = new HashSet<Room>();
+      for (Node room : collector.getNodeCollection(root, dragState.state()))
+        rooms.add((Room)room);
 	}
 	if (MapUtil.isMoveable(map, rooms, dir))
 	  MapUtil.moveRooms(map, rooms, dir);

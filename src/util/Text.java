@@ -5,10 +5,10 @@ import java.util.*;
 public class Text 
 implements Cloneable {
 
-  private Vector lines;
+  private Vector<String> lines;
 
   public Text() {
-    lines = new Vector();
+    lines = new Vector<String>();
   } // Text
 
   /** returns the number of lines in text
@@ -38,7 +38,7 @@ implements Cloneable {
    * @param index must be within 0 and (getLineCount() - 1)
    */
   public String getLine(int index) {
-    return (String)lines.elementAt(index);
+    return lines.elementAt(index);
   } // getLine
 
   /** removes the line of the given index from the text, then
@@ -97,7 +97,7 @@ implements Cloneable {
 
   public Object clone() {
     Text clone = new Text();
-    clone.lines = (Vector)lines.clone();
+    clone.lines = new Vector<String>(lines);
     return clone;
   } // clone
 
