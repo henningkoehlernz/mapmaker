@@ -1,7 +1,7 @@
 COPT = -cp bin -d bin -Xlint:unchecked
 
 default: compile
-all: clean compile jar
+all: compile jar zip
 
 compile:
 	mkdir -p bin/util bin/mapmaker/mapcmd
@@ -12,4 +12,5 @@ clean:
 	rm -r bin
 jar:
 	cd bin && jar cvfe ../MapMaker.jar MapMaker *.class mapmaker/*.class mapmaker/mapcmd/*.class util/*.class
-	jar uvf MapMaker.jar doc maps readme.txt
+zip:
+	tar cfz mapmaker.tgz MapMaker.jar doc maps src makefile gpl-3.0.txt readme.txt
